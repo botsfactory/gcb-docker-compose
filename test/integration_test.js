@@ -28,14 +28,14 @@ describe('integration tests', () => {
 
         const connection = mysql.createConnection({ host: process.env.MYSQL_HOST, port: process.env.MYSQL_PORT, user: 'user', password: '1234' })
 
-        connection.on('connect', () => {
+        connection.connect(function (err) {
+
+            if (err) {
+
+                throw err
+            }
 
             done()
-        })
-
-        connection.on('error', (err) => {
-
-            throw err
         })
 
     }).timeout(10000)
