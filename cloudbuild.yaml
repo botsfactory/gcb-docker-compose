@@ -28,7 +28,7 @@ steps:
   - 'REDIS_HOST=redis'
   - 'REDIS_PORT=6379'
   - 'MYSQL_HOST=mysql'
-  - 'MYSQL_PORT=3306'
+  - 'MYSQL_PORT=3307'
 
 # Push the new image to the registry.
 images: ['gcr.io/$PROJECT_ID/gcb-docker-compose:latest']
