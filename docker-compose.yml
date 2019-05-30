@@ -6,8 +6,8 @@ services:
     image: gcr.io/${PROJECT_ID}/gcb-docker-compose:latest
     container_name: counter
     depends_on:
-      redis:
-      mysql:
+      - redis
+      - mysql:
         condition: service_healthy
 
     ports:
