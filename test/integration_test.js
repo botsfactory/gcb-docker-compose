@@ -26,7 +26,7 @@ describe('integration tests', () => {
         client.reset({}, done);
     });
 
-    it('should connect to redis', async (done) => {
+    it('should connect to redis', (done) => {
 
         // Redis client.
         const opts = {
