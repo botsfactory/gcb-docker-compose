@@ -1,4 +1,5 @@
 const redis = require('redis');
+const mysql = require('mysql');
 
 describe('integration tests', () => {
 
@@ -18,6 +19,21 @@ describe('integration tests', () => {
         })
 
         redisClient.on('error', (err) => {
+
+            throw err
+        })
+    })
+
+    it('shuold connect to mysql', (done) => {
+
+        const connection = mysql.createConnection({ host: process.env.MYSQL_HOST, port: process.env.MYSQL_PORT, user: 'user', password: '1234' })
+
+        connection.on('connect', () => {
+
+            done()
+        })
+
+        connection.on('error', (err) => {
 
             throw err
         })
