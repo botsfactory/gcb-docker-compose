@@ -27,7 +27,7 @@ steps:
   - 'PORT=50051'
   - 'REDIS_HOST=redis'
   - 'REDIS_PORT=6379'
-  - 'MYSQL_HOST=0.0.0.0'
+  - 'MYSQL_HOST=localhost'
   - 'MYSQL_PORT=3306'
 
 # Push the new image to the registry.
