@@ -26,8 +26,6 @@ describe('integration tests', () => {
 
     it('shuold connect to mysql', (done) => {
 
-        this.timeout(10000);
-
         const connection = mysql.createConnection({ host: process.env.MYSQL_HOST, port: process.env.MYSQL_PORT, user: 'user', password: '1234' })
 
         connection.on('connect', () => {
@@ -39,5 +37,6 @@ describe('integration tests', () => {
 
             throw err
         })
-    })
+
+    }).timeout(10000)
 });
