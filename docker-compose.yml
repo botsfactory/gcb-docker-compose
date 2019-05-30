@@ -21,7 +21,7 @@ services:
     container_name: redis
     image: redis
     ports:
-      - "6379:6379"
+      - "7379:6379"
     healthcheck:
       test: ["CMD", "redis-cli","ping"]
       interval: 30s

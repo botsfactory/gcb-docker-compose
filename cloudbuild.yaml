@@ -26,7 +26,7 @@ steps:
   - 'HOST=counter' # running container, container_name defined in the docker-compose.yml
   - 'PORT=50051'
   - 'REDIS_HOST=redis'
-  - 'REDIS_PORT=6379'
+  - 'REDIS_PORT=7379'
   - 'MYSQL_HOST=mysql'
   - 'MYSQL_PORT=3306'
 
